@@ -1,0 +1,36 @@
+<form action="" name="addRuleForm">
+  <div class="form-group">
+    <label for="title">{{titleGroup.label}}</label>
+    <input
+        type="text"
+        class="form-control"
+        name="title"
+        #title="ngModel"
+        [placeholder]="titleGroup.placeholder"
+        [ngModel]="titleGroup.value"
+        required>
+    <div *ngIf="title.invalid && (title.dirty || title.touched)">{{titleGroup.errorMessage}}</div>
+  </div>
+
+  <div class="form-group">
+    <label for="pubShare">{{pubShareGroup.label}}</label>
+    <input
+      type="text"
+      name="pubShare"
+      class="formControl"
+      #pubShare="ngModel"
+      [ngModel]="pubShareGroup.value"
+      required >
+  </div>
+
+  <div class="form-group">
+    <label for="myShare">{{myShareGroup.label}}</label>
+    <input
+      type="text"
+      name="myShare"
+      #myShare="ngModel"
+      [ngModel]="myShareGroup.value"
+      required>
+  </div>
+
+</form>
