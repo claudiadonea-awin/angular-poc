@@ -3,13 +3,18 @@ import {
   OnInit,
   EventEmitter,
   Output,
+  ViewEncapsulation,
  } from '@angular/core';
+
+import { DecimalPipe } from '@angular/common';
+
 import { InputGroup } from './add-rule.model';
 
 @Component({
   selector: 'app-add-rule',
   templateUrl: './add-rule.component.html',
-  styleUrls: ['./add-rule.component.css']
+  styleUrls: ['./add-rule.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AddRuleComponent implements OnInit {
   titleGroup: InputGroup;

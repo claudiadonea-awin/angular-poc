@@ -1,5 +1,5 @@
-import { 
-  Component, 
+import {
+  Component,
 } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 

@@ -19,7 +19,7 @@
       name="pubShare"
       class="formControl"
       #pubShare="ngModel"
-      [ngModel]="pubShareGroup.value"
+      [ngModel]="pubShareGroup.value | number: '1.2'"
       required >
   </div>
 
