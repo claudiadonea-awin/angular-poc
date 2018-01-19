@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label for="title">{{inputConfig.label}}</label>
+  <input
+      type="text"
+      class="form-control"
+      name="title"
+      #title="ngModel"
+      [placeholder]="inputConfig.placeholder"
+      [ngModel]="inputConfig.value"
+      required>
+  <div
+    *ngIf="title.invalid && (title.dirty || title.touched)"
+    class="errorMessage">
+    {{inputConfig.errorMessage}}
+  </div>
+</div>

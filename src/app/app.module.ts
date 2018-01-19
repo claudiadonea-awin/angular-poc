@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
+import { InputComponent } from './shared-components/input/input.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddRuleComponent
+    AddRuleComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

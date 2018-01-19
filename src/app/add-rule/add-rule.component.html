@@ -1,16 +1,8 @@
 <form action="" name="addRuleForm">
-  <div class="form-group">
-    <label for="title">{{titleGroup.label}}</label>
-    <input
-        type="text"
-        class="form-control"
-        name="title"
-        #title="ngModel"
-        [placeholder]="titleGroup.placeholder"
-        [ngModel]="titleGroup.value"
-        required>
-    <div *ngIf="title.invalid && (title.dirty || title.touched)">{{titleGroup.errorMessage}}</div>
-  </div>
+
+  <app-input [inputConfig]="titleGroup"></app-input>
+
+  <app-input [inputConfig]="pubShareGroup"></app-input>
 
   <div class="form-group">
     <label for="pubShare">{{pubShareGroup.label}}</label>
@@ -19,7 +11,8 @@
       name="pubShare"
       class="formControl"
       #pubShare="ngModel"
-      [ngModel]="pubShareGroup.value | number: '1.2'"
+      [ngModel]="pubShareGroup.value | number: '1.2' "
+      (keyup)="filter($event, pubShareGroup.type)"
       required >
   </div>
 

@@ -8,7 +8,7 @@ import {
 
 import { DecimalPipe } from '@angular/common';
 
-import { InputGroup } from './add-rule.model';
+import { InputGroup } from '../shared-models/input.model';
 
 @Component({
   selector: 'app-add-rule',
@@ -40,6 +40,14 @@ export class AddRuleComponent implements OnInit {
     document.body.dispatchEvent(customEvent);
 
     console.log('submit', data);
+  }
+
+  filter(event: any, type: string) {
+    if (typeof event.key !== ('number' || 'Backspace')) {
+
+    console.log(event, type);
+      return;
+    }
   }
 
 }

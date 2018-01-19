@@ -1,0 +1,26 @@
+.form-control {
+    width: 100%;
+    min-width: 60px;
+    padding: 8px 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    line-height: 1.375em;
+    font-family: "Whitney SSm A","Whitney SSm B",Tahoma,sans-serif;
+    font-size: 13px;
+    background-color: #fff;
+    color: #444;
+    display: block;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    -webkit-transition-property: border-color;
+    transition-property: border-color;
+}
+
+.errorMessage {
+    border-left: 5px solid #c33;
+    padding: 10px;
+    background-color: #fcefee;
+    color: #c33;
+    margin-top: 10px;
+    clear: left;
+}
