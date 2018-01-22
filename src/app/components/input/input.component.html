@@ -1,0 +1,10 @@
+<div class="form-group">
+  <div class="container">
+    <label for="title" class="label">{{inputConfig.label}}</label>
+    <input class="form-control" name="title" #ref="ngModel" [placeholder]="inputConfig.placeholder" [(ngModel)]="inputConfig.value"
+      required>
+  </div>
+  <div *ngIf="ref.invalid && (ref.dirty || ref.touched)" class="error-message">
+    {{inputConfig.errorMessage}}
+  </div>
+</div>

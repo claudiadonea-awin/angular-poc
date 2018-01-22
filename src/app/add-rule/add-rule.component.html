@@ -4,26 +4,17 @@
 
   <app-input [inputConfig]="pubShareGroup"></app-input>
 
-  <div class="form-group">
-    <label for="pubShare">{{pubShareGroup.label}}</label>
-    <input
-      type="text"
-      name="pubShare"
-      class="formControl"
-      #pubShare="ngModel"
-      [ngModel]="pubShareGroup.value | number: '1.2' "
-      (keyup)="filter($event, pubShareGroup.type)"
-      required >
+  <!-- <div class="form-group">
+    <label for="pubShare" class="">{{pubShareGroup.label}}</label>
+    <div class="col-10">
+      <input id="pubShareName" type="text" name="pubShareName" class="form-control" #pubShareRef="ngModel" [(ngModel)]="pubShareGroup.value "
+        (keydown)="filter($event, pubShareGroup.type)" required>
+    </div>
   </div>
+
 
   <div class="form-group">
     <label for="myShare">{{myShareGroup.label}}</label>
-    <input
-      type="text"
-      name="myShare"
-      #myShare="ngModel"
-      [ngModel]="myShareGroup.value"
-      required>
-  </div>
-
+    <input type="text" name="myShare" class="form-control" #myShare="ngModel" [(ngModel)]="myShareGroup.value" required>
+  </div> -->
 </form>
